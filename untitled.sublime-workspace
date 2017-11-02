@@ -1,0 +1,249 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"begin",
+				"beginend\t$1.begin(), $1.end()"
+			],
+			[
+				"cha",
+				"charAt"
+			],
+			[
+				"ma",
+				"main\tmain()"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 94.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/home/raghvendr_rao/Documents/code-memory/isPalindrom.cpp",
+		"/home/raghvendr_rao/Documents/code-memory/sieve.cpp",
+		"/home/raghvendr_rao/Desktop/883c.cpp",
+		"/home/raghvendr_rao/UnimodalArray.cpp",
+		"/home/raghvendr_rao/Documents/myprojects/university-management-system/test.cpp",
+		"/home/raghvendr_rao/Documents/Data-Structures/QueInt.java",
+		"/home/raghvendr_rao/Documents/Codeforces/CONTRIBUTING.md",
+		"/home/raghvendr_rao/Documents/myprojects/university-management-system/something.cpp",
+		"/home/raghvendr_rao/Documents/Data-Structures/CircularQueue.java",
+		"/home/raghvendr_rao/Documents/myprojects/university-management-system/Start.java",
+		"/home/raghvendr_rao/College Portal/Start.java",
+		"/home/raghvendr_rao/Test.java",
+		"/home/raghvendr_rao/2.cpp",
+		"/home/raghvendr_rao/Downloads/sid_lab3/3.c",
+		"/home/raghvendr_rao/Downloads/sid_lab3/16058A35.java",
+		"/home/raghvendr_rao/CircularQueue.java",
+		"/home/raghvendr_rao/Stack/StackApp.java",
+		"/home/raghvendr_rao/16051A21.java",
+		"/home/raghvendr_rao/knight.cpp",
+		"/home/raghvendr_rao/knight.c",
+		"/home/raghvendr_rao/Documents/CODES/Codeforces/A/69A.cpp",
+		"/home/raghvendr_rao/Documents/CODES/Codeforces/A/16051A35.java",
+		"/home/raghvendr_rao/Documents/CODES/Codeforces/A/16051A34.java",
+		"/home/raghvendr_rao/Documents/CODES/Codeforces/A/Theatre Square.cpp",
+		"/home/raghvendr_rao/Desktop/16051A15.java",
+		"/home/raghvendr_rao/Desktop/16051A14.java",
+		"/home/raghvendr_rao/Desktop/16051A11.java",
+		"/home/raghvendr_rao/Desktop/16051A12.java"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/home/raghvendr_rao/Documents/Student-Diary"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
