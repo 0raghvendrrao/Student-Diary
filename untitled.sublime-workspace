@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"Objest",
+				"ObjectOutputStream"
+			],
+			[
+				"set",
+				"setRollNo"
+			],
+			[
+				"get",
+				"getRollNo"
+			],
+			[
+				"th",
+				"this"
+			],
+			[
 				"begin",
 				"beginend\t$1.begin(), $1.end()"
 			],
@@ -19,6 +35,39 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "import java.util.*;\nimport java.io.*;\n\npublic class Student implements Serializable{\n\tprivate String rollno=\"\";\n\tprivate String name=\"\";\n\n\tStudent(String rollno, String name){\n\t\tif(isRollNo(rollno))\n\t\tthis.rollno=rollno;\n\t\telse\n\t\t\treturn;\n\t\tthis.name=name;\n\t}\n\n\tprivate boolean isRollNo(String rollno){\n\t\tif(rollno.length()!=15){\n\t\t\tSystem.out.println(\"*Roll. No. must be of length 15. Eg:AM.EN.U4CSE16051\");\n\t\t\treturn false;\n\t\t}\n\t\tif(rollno.charAt(2)!='.' || rollno.charAt(5)!='.'){\n\t\t\tSystem.out.println(\"Roll. No. Must be of the form AM.EN.U4CSE16051\");\n\t\t\treturn false;\n\n\t\t}\n\t\treturn true;\n\t}\n\n\tprotected void setRollNo(){\n\t\tScanner s=new Scanner(System.in);\n\t\tdo{\n\t\t\tSystem.out.print(\"Enter Roll no. : \");\n\t\t\trollno = s.next();\n\t\t}\n\t\twhile(!isRollNo(rollno));\n\n\t}\n\tpublic String getRollNo(){\n\t\treturn rollno;\n\t}\n\n\tprotected void setName(){\n\t\tScanner s= new Scanner(System.in);\n\t\tname=s.nextLine();\n\t}\n\n\tpublic String getName(){\n\t\treturn name;\n\t}\n\n\tprotected void setDetails(){\n\t\tsetRollNo();\n\t\tsetName();\n\t}\n\n}\n\n",
+			"file": "Code/Student.java",
+			"file_size": 1017,
+			"file_write_time": 131541191158443390,
+			"settings":
+			{
+				"buffer_size": 1017,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "import java.io.*;\nimport java.util.*;\n\npublic class Studentfh{\n\tpublic static ArrayList<Student> get(){\n\t\ttry{\n\t\t\tArrayList<Student> list = new ArrayList<Student>();\n\t\t\tObjectInputStream in = new ObjectInputStream(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tnew BufferedInputStream(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tnew FileInputStream(\"../files/Students.ser\")));\n\t\t\twhile(true){\n\t\t\t\tlist.add((Student)in.readObject());\n\t\t\t}\n\t\t}\n\t\tcatch(EOFException E){\n\t\t\treturn list;\n\t\t}\n\t\tcatch(IOException e){\n\t\t\te.printStackTrace();\n\t\t}\n\n\t\tcatch(ClassNotFoundException e){\n     \t \tSystem.out.println(\"*****Error ! Course.java file is missing !*****\");\n      \t\treturn list;\n    \t}\n\t}\n\n\tpublic static void put(ArrayList<Student> list){\n\t\ttry{\n\t\t\tObjectOutputStream out = new ObjectOutputStream(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tnew BufferedOutputStream(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tnew FileOutputStream(\"../files/Students.ser\")));\n\t\t\tfor(Student s: list){\n\t\t\t\tout.wirteObject(s);\n\n\t\t\t}\n\t\t}\n\t\tcatch(IOException e){\n\t\t\te.printStackTrace();\n\t\t}\n\t}\n}",
+			"file": "Code/Studentfh.java",
+			"file_size": 0,
+			"file_write_time": 131541193487655036,
+			"settings":
+			{
+				"buffer_size": 956,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Code/tester.java",
+			"settings":
+			{
+				"buffer_size": 132,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -59,16 +108,16 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 94.0,
+		"height": 338.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 392.0
+		"width": 384.0
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 130.0,
 		"history":
 		[
 		]
@@ -84,6 +133,8 @@
 	},
 	"expanded_folders":
 	[
+		"/home/raghvendr_rao/Documents/Student-Diary",
+		"/home/raghvendr_rao/Documents/Student-Diary/Code"
 	],
 	"file_history":
 	[
@@ -118,7 +169,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -132,6 +183,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"Out"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -155,8 +207,93 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Code/Student.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1017,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								59,
+								59
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Code/Studentfh.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 956,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								947,
+								947
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Code/tester.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 132,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								126,
+								126
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -166,7 +303,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"layout":
 	{
@@ -198,6 +335,10 @@
 	"output.find_results":
 	{
 		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 90.0
 	},
 	"pinned_build_system": "",
 	"project": "",
