@@ -2,11 +2,11 @@ import java.util.*;
 import java.util.Scanner;
 
 public class Attendance {
-    private Date lastUpdated;
+     Date lastUpdated;
     static int minAttendance;
-    private int classesAttended;
-    private int totalClasses;
-    private int percentage;
+     int classesAttended;
+     int totalClasses;
+     int percentage;
     public Attendance(int minAttendance){
         this.minAttendance = minAttendance;
         lastUpdated = new Date();

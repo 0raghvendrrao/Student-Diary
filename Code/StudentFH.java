@@ -1,8 +1,8 @@
 import java.util.*;
 import java.io.*;
 
-public class StudentFileHandler implements Serializable{
-	public ArrayList<Student> get(){
+public class StudentFH implements Serializable{
+	public static ArrayList<Student> get(){
 		ArrayList<Student> temp=new ArrayList<Student>();
 		ObjectInputStream obj = null;
 
@@ -25,7 +25,7 @@ public class StudentFileHandler implements Serializable{
                 return temp;
 	}
 
-	public void put(ArrayList<Student> temp){
+	public static void put(ArrayList<Student> temp){
 		
 		try {
 			ObjectOutputStream obj = new ObjectOutputStream(new FileOutputStream("../Files/Student.ser"));

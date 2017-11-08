@@ -2,3 +2,4 @@
 
 javac *.java
 mv *.class ../Classes/
+

@@ -2,20 +2,29 @@ import java.util.ArrayList;
 import java.io.*;
 public class Branch  {
 	String name;
-	ArrayList<faculty> teachers;
-	ArrayList<student> students;
-	static ArrayList<Course> branchSubjects;
-	static ArrayList<Branch> totalBranches = new ArrayList<Branch>();
-
+	ArrayList<Faculty> teachers=null;
+	ArrayList<Student> students=null;
+	ArrayList<Course> branchSubjects=null;
+	Faculty headOfDept=null;
 	
-	Branch(){
-		totalBranches.add(this);
+	Branch(String name){
 		
+		this.name = name;
+	}
+	public void makeHOD(Faculty f){
+		headOfDept=f;
 	}
 	public void addCourses(Course c){
-		subjects.add(c);
+		branchSubjects.add(c);
 	}
 	public void removeCourses(Course c){
-		subjects.remove(c);
+		branchSubjects.remove(c);
+	}
+
+	public void addFaculty(Faculty c){
+		teachers.add(c);
+	}
+	public void removeFaculty(Faculty c){
+		teachers.remove(c);
 	}
 }

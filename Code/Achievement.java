@@ -1,13 +1,15 @@
 import java.util.Date;
 public class Achievement {
-	private String name;
-	private int rank;
-	private String type;
-	private Date date;
-	private String proof;
-	private boolean approved;
-	private Faculty approvedBy;
-	Achievement(String name, int rank, String type, String proof,Date date){
+	 String name;
+	 Student std;
+	 int rank;
+	 String type;
+	 Date date;
+	 String proof;
+	 boolean approved;
+	 Faculty approvedBy;
+	Achievement(Student std,String name, int rank, String type, String proof,Date date){
+		this.std = std;
 		this.name = name;
 		this.rank = rank;
 		this.type = type;

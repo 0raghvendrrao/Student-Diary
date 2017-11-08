@@ -14,6 +14,6 @@ public class Anouncement {
 	}
 	
 	public String toString(){
-		return String.format("%s%29s|%s%29s|%s",this.name,this.givenBy,this.reason);
+		return String.format("%s%29s|%s%29s|%s",this.name,this.givenBy,this.anouncement);
 	}
 }

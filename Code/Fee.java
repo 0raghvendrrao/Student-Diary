@@ -4,8 +4,9 @@ public class Fee {
 	String name;
 	Date due;
 	int delay;
-	Fee(String nam,float amt){
+	Fee(String nam,float amt, Date due){
 		name = nam;
 		amount = amt;
+		this.due = due;
 	}
 }

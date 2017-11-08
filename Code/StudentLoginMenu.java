@@ -4,8 +4,8 @@ class StudentLoginMenu{
 	public static void loginMenu (Student s){
 		while(true){
 			System.out.println("Welcome "+s.getName());
-			System.out.println("1. Academics \n2. Finance \n3.Personal Details \n4. Back \n5. Log Out");
-			Scanner sc = new Scanner(Sytem.in);
+			System.out.println("1. Academics \n2. Finance \n3.Personal Details \n4. Back ");
+			Scanner sc = new Scanner(System.in);
 			int ch = sc.nextInt();
             switch(ch)
             {
@@ -22,11 +22,9 @@ class StudentLoginMenu{
                         break;
 
                 case 4:
-                        s.writeInfo();
-
-                case 5:
                         return;
 
+                
                 default:
                         break;
             }

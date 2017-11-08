@@ -2,12 +2,12 @@ import java.util.*;
 import java.io.*;
 
 public class Address {
-	private String place = "";
-	private String district = "";
-	private String state = "";
-	private String country = "";
-	private String Zip = "";
-	private String phone;
+	 String place = "";
+	 String district = "";
+	 String state = "";
+	 String country = "";
+	 String Zip = "";
+	 String phone;
 	Address(String place, String district , String state , String country, String Zip, String phone){
 		this.place = place;
 		this.district = district;
