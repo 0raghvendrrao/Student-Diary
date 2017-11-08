@@ -3,11 +3,14 @@ package Student;
 import java.util.Scanner;
 
 public class Scholarship extends Fee{
-    String name;
+    
     int percentage;
     Scholarship(String name, int percentage) {
-        this.name = name;
+        super();
+
+        super.name = name;
         this.percentage = percentage;
+        super.amount = (percentage*(super.amount))/100;
         
     }
 

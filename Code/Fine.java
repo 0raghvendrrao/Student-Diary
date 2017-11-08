@@ -1,7 +1,8 @@
 import java.util.Date;
 public class Fine extends Fee{
 	
-	Fee(string nam,float amt){
+	Fine(String nam,float amt){
+		super(nam, amt);
 		name = nam;
 		amount = amt;
 

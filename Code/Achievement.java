@@ -15,9 +15,9 @@ public class Achievement {
 		this.date = date;
 		this.approved = false;
 	}
-	public void approve(){
+	public void approve(Faculty fac){
 		this.approved = true;
-
+		this.approvedBy = fac;
 	}
 	public String toString(){
 		return String.format("%29s|%29s|%29s|%29s",this.name,this.type,this.date,this.approvedBy.name);

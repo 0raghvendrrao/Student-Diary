@@ -4,10 +4,8 @@ public class Fee {
 	String name;
 	Date due;
 	int delay;
-	Fee(string nam,float amt){
+	Fee(String nam,float amt){
 		name = nam;
 		amount = amt;
-
 	}
-	
 }

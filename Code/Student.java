@@ -1,10 +1,8 @@
 import java.util.*;
 import java.io.*;
 
-public class Student implements Serializable{
+public class Student extends User implements Serializable{
 
-	private String rollno="";
-	private String name="";
 	private ArrayList<Achievement> achieved;
 	private Branch stream;
 	private Attendance attend;
@@ -14,21 +12,47 @@ public class Student implements Serializable{
 	private boolean isHonors=false;
 	private boolean hasScholarship=false;
 
-	Student(String rollno, String name, String stream){
-		if(isRollNo(rollno))
-		this.rollno=rollno;
+	public Student searchStudent(String rollno){
+		ArrayList<Student> temp = new ArrayList<Student>();
+		temp = StudentFileHandler.get();
+		Iterator it = temp.iterator();
+		while (it.hasNext()) {
+            
+            if (s.getRollNo().compareTo(rollno) == 0)
+                return s;
+        }
+                
+        return null;
+	}
+
+	Student(String username, String name, Branch stream){
+		try{
+			if(isRollNo(username))
+		this.username=username;
 		else
-			throw IncorrectRollNoException e;
+			throw IncorrectRollNoException;
+		}
+		catch(IncorrectRollNoException e){
+			System.out.println("Invalid username");
+			return;
+		}
 		this.name = name;
 		this.stream = stream;
 	}
+	createStudent(){
+		String 
+	}
+	getAttendace(){
 
-	private boolean isRollNo(String rollno){
-		if(rollno.length()!=15){
+	}
+
+	viewAchievement
+	private boolean isRollNo(String username){
+		if(username.length()!=15){
 			System.out.println("*Roll. No. must be of length 15. Eg:AM.EN.U4CSE16051");
 			return false;
 		}
-		if(rollno.charAt(2)!='.' || rollno.charAt(5)!='.'){
+		if(username.charAt(2)!='.' || username.charAt(5)!='.'){
 			System.out.println("Roll. No. Must be of the form AM.EN.U4CSE16051");
 			return false;
 
@@ -40,13 +64,13 @@ public class Student implements Serializable{
 		Scanner s=new Scanner(System.in);
 		do{
 			System.out.print("Enter Roll no. : ");
-			rollno = s.next();
+			username = s.next();
 		}
-		while(!isRollNo(rollno));
+		while(!isRollNo(username));
 
 	}
 	public String getRollNo(){
-		return rollno;
+		return username;
 	}
 
 	void setName(){
@@ -85,7 +109,7 @@ public class Student implements Serializable{
     }
   }
 
-  public static void put(ArrayList<Student> list){
+  public void put(ArrayList<Student> list){
     try{
       ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("../files/Student"));
       for(Student obj:list){
