@@ -5,6 +5,7 @@ public class Student extends User implements Serializable{
 
 	ArrayList<Achievement> achieved;
 	Branch stream;
+	double cgpa;
 	Attendance attend;
     ArrayList<Course> subject;
     ArrayList<Anouncement> ann;
@@ -44,6 +45,75 @@ public class Student extends User implements Serializable{
 	public void addFee (Fee temp){
 		fees.add(temp);
 	}
+
+	public void printAcademicDetails(){
+		System.out.println("Branch: "+stream.name+"\nAnouncements: "+printAnouncements());
+	}
+	public int printAnouncements(){
+		int size = 0;
+		for(Anouncement a : ann){
+			System.out.println(a.toString());
+			size++;
+		}
+		return size;
+	}
+	public void printAchievement(){
+		for(Achievement a : achieved){
+			System.out.println(a.toString());
+		}
+	}
+	public void printCources(){
+		for(Course c : subject){
+			System.out.println("Course code: "+c.code+"\ncourse name: "+c.name+"\ncredits: "+c.credit);
+		}
+	}
+
+	public void takeCourse(int index) throws ProfileNotReviewedException
+        {
+                if (true)
+                {
+                        Course.printCourses();
+
+                        System.out.print("\n>> ");
+                        Scanner s = new Scanner(System.in);
+                        int a = s.nextInt();
+
+                        int i = 0;
+                        ObjectInputStream obj = null;
+                        Course co = null;
+                        try {
+                                obj = new ObjectInputStream(new FileInputStream("../Files/Courses.dat"));
+                                while (true)
+                                {
+                                        co = (Course) obj.readObject();
+                                        if (i == a-1)
+                                        {
+                                                subject.add(index, co);
+                                                break;
+                                        }
+                                        i = i+1;
+                                }
+                        } catch (EOFException eof) {
+                                System.out.println("Specify a valid course!");
+                        } catch (Exception e) {
+                                e.printStackTrace();
+                        }
+                }
+                else
+                        System.out.println("Invalid");
+
+        }
+        public double calcCGPA()
+        {
+                int total = 0;
+                for(Course i:subject)
+                {
+                        total += i.sgpa;
+                }
+                	cgpa = total/subject.size();
+                return cgpa;
+        }
+
 }
 // 	createStudent(){
 // 		String 

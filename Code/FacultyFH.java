@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class FacultyFH implements Serializable, FileHandler{
+public class FacultyFH implements Serializable{
 	public static ArrayList<Faculty> get(){
 		ArrayList<Faculty> temp=new ArrayList<Faculty>();
 		ObjectInputStream obj = null;

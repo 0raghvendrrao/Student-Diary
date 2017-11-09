@@ -4,6 +4,7 @@ import java.io.*;
 public class Course implements Serializable{
   String code;
   String name;
+  double sgpa;
   int credit;
   Attendance attend;
   ArrayList<Faculty>f;
@@ -38,5 +39,13 @@ public class Course implements Serializable{
 
   public String getCourseName(){
     return name;
+  }
+  public static void printCourses(){
+    ArrayList<Branch> arr=BranchFH.get();
+    for(Branch b: arr){
+      for(Course c: b.branchSubjects){
+        System.out.println(c.name);
+      }
+    }
   }
 }

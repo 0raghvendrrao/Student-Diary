@@ -13,13 +13,14 @@ public class Faculty extends User implements Serializable{
             if (s.getUsername().compareTo(rollno) == 0)
                 return s;
         }
+        return null;
     }
 	
 	Faculty(String username, String name, Branch stream){
 		super(username,name);
 		super.addStream(stream);
 	}
-public void makeAnouncement(Anouncement temp, ArrayList<Student> s){
+	public void makeAnouncement(Anouncement temp, ArrayList<Student> s){
 		
 		for(Student x : s){
 			x.addAnouncement(temp);

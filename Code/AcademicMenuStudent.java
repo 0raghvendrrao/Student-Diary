@@ -3,7 +3,7 @@ import java.util.*;
 
 public class AcademicMenuStudent// implements AcademicMenu
 {
-        public static void AcademicMenu (Student s) throws ProfileNotReviewedException, CourseNotFoundException, Exception
+        public static void AcademicMenu (Student s) throws  CourseNotFoundException, Exception
         {
                 //Student s = Student.searchStudent(rollno);
 
